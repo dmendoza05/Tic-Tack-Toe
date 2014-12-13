@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="eXoApp">
+<head>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="script/angular.js"></script>
+    <!-- <script src="script/script.js"></script> -->
+	<title> Tic Tac Toe </title>
+</head>
+<body ng-controller="ExoController">
+	<div >
+		<header>
+			HEADER
+		</header>
+	</div>
+
+	<!-- table will create the gameboard. it will be 3x3 in size and each cell will be clickable  -->
+	<div id="gameboard">
+		<table>
+			<tr id="R1">	
+				<td><div ng-style="colorchange" id="A1" ng-click="colorchange={background:'yellow'}"></div></td>
+				<td><div id="A2"></div></td>	
+				<td><div id="A3"></div></td>
+			</tr>
+			<tr id="R2">	
+				<td><div id="B1"></div></td>
+				<td><div id="B2"></div></td>
+				<td><div id="B3"></div></td>
+			</tr>
+			<tr id="R3">	
+				<td><div id="C1"></div></td>
+				<td><div id="C2"></div></td>
+				<td><div id="C3"></div></td>
+			</tr>
+		</table>       
+	</div>
+</body>
+</html>

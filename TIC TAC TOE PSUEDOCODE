@@ -1,0 +1,112 @@
+ITIC TAC TOE PSUEDOCODE
+
+create the page structre
+	make a header
+		make a body	
+			make 3 columns to seperate 
+				make player side
+					choose player image
+						name the player
+							choose player tiles(X)
+
+				make the board tiles and layout
+					create functionality
+
+				make player 2 side
+					choose playe image
+						name the player
+							choose player tiles(O)
+
+create simple tictactoe board
+	format the layout for the boards
+		create 1 box to contain 9 tiles
+	
+look for an opponent
+	play in real time
+		who is player 1?
+		who is player 2?
+			who goes first
+				player 1 goes first
+					pick a side
+						player 1 chose X
+							then player 2 is O
+								start game
+
+				player 2 goes first 
+					pick a side
+						player 2 chose X
+							then player 1 is O
+								start game
+
+									what's the first move?
+									what's the second move?
+									what's the third move?
+									what's the fourth move?
+									what's the fifth move?
+										did it end? 
+											yes?
+												who won??
+											no?
+												then continue
+
+									what's the sixth move?
+										did it end? 
+											yes?
+													who won??
+											no?
+												then continue
+
+									what's the seventh move?
+										did it end? 
+											yes?
+												who won??
+											no?
+												then continue
+
+									what's the eigth move?
+										did it end? 
+											yes?
+												who won??
+											no?
+												then continue
+
+										what's the ninth move?	
+											did it end? 
+												yes?
+													who won??
+
+											did player1 win?
+												yes?? 
+													add 1 to player 1 score
+												no?
+													do nothing
+
+											did player2 win?
+												yes
+													add 1 to player 2 score
+												no?
+													alert him that he lost
+
+											
+
+
+					
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

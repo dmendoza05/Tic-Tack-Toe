@@ -1,0 +1,49 @@
+body{
+
+}
+header{
+	text-align: center;
+}
+table{
+	height: 150px;
+	width: 150px;
+	padding: 0;
+	border-spacing: 0;
+	border-collapse: collapse;
+	margin: auto;
+}
+td{
+	border: 1px black solid;
+
+}
+div{
+	width: 100%;
+	height:100%;
+}
+	
+/*   o~o~o~OOO~o~o~o
+   <(    CLASSES    )>
+     o~o~o~OOO~o~o~o
+*/	
+.A1{
+	width: 100%;
+	height: 100%;
+	background-color: yellow;
+}
+/*     o~o~o~OOO~o~o~o
+     <(      #ID      )>
+       o~o~o~OOO~o~o~o
+*/
+
+#gameboard{
+}
+#R1{
+	background-color: silver;	
+}
+#R2{
+	background-color: green;	
+}
+#R3{
+	background-color: blue;
+}
+#
