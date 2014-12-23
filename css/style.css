@@ -1,49 +1,99 @@
 body{
+	background-color: black;
 
+}
+input{
+	background-color: black;
+	color: white;
+	border-color: black;
+	text-align: center;
+	width: 120px;
+	height: 30px;
 }
 header{
 	text-align: center;
 }
 table{
-	height: 150px;
-	width: 150px;
+	-webkit-transform: rotate(45deg);
+	height: 170px;
+	width: 170px;
 	padding: 0;
 	border-spacing: 0;
 	border-collapse: collapse;
-	margin: auto;
+	margin: 60px auto;
+	background-color: black;
 }
 td{
-	border: 1px black solid;
-
+	background-color: black;
+	border: 2px white solid;
+	width: 54px;
+	height: 54px;
 }
 div{
 	width: 100%;
 	height:100%;
+	color: white;
+	font-size: 30px;
 }
-	
 /*   o~o~o~OOO~o~o~o
    <(    CLASSES    )>
      o~o~o~OOO~o~o~o
 */	
-.A1{
-	width: 100%;
-	height: 100%;
-	background-color: yellow;
+.X{
+	width: 30px; 
+	height: 30px;
+ 	margin: 22px 0 0 10px;
+ 	background-color: white;
+}
+
+.X:hover{
+	background-color: maroon;
+}
+.O{
+	margin: 5px auto;
+	width: 36px; 
+	height: 36px;
+ 	margin: 18px 0 0 8px;
+  	background-color: white;
+  	border-radius: 100px
+}
+.O:hover{
+	background-color: indigo;
+}
+.PLAYA1{
+	margin-left: 20px;
+}
+.result{
+	margin: auto;
+	text-align: center;
+	font-color: white;
+	width: 300px;
+	height: 40px;
 }
 /*     o~o~o~OOO~o~o~o
      <(      #ID      )>
        o~o~o~OOO~o~o~o
 */
-
-#gameboard{
+#startPage{
+	width: 500px;
+	height: 300px;
+	border: 1px white solid;
+	position: absolute;
+	left: 15%;
+	top: 10%;
+	background-color: black;
+	color: white;
+	text-align: center;
 }
-#R1{
-	background-color: silver;	
+#cross{
+	-webkit-transform: rotate(45deg);
+	margin: auto;
+	font-size: 100px;
 }
-#R2{
-	background-color: green;	
-}
-#R3{
-	background-color: blue;
-}
-#
+/*#triangle{
+	width: 0px; 
+	height: 0;
+ 	border: 12px solid transparent;
+ 	 border-right-color: white;
+ 	border-left-color: white; 
+}*/

@@ -1,67 +1,43 @@
 <!DOCTYPE html>
 <html ng-app="eXoApp">
 <head>
+	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<script src="script/angular.js"></script>
- 	<script src="script/script.js"></script> 
-	
+	<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+	<script src="script/main.js"></script>
+ 	<script src="script/ExoController.js"></script> 
+
 	<title> Tic Tac Toe </title>
 </head>
-<body ng-controller="ExoController">
-	<div >
-		<header>
-			 
-		</header>
-	</div>
-	<div id="circle"><div id="circle2"></div></div>
+
+<body ng-controller="ExoController as exCon">
 	<!-- table will create the gameboard. it will be 3x3 in size and each cell will be clickable  -->
-	<div id="gameboard_div">
+	<div>
 		<table id="gameboard_Id">
-			<tr id="R1">
-				<td>
-					<div ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-						<p>x</p>
-					</div>
-				</td>
-				<td>
-					<div ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>	
-				<td>
-					<div ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-						
+			<tr data-ng-repeat="row in exCon.gameArray">
+				<td data-ng-repeat="cell in row" ng-click="exCon.click($parent.$index, $index)">
+					<div>
+						<div class="sym" ng-class="this.cell.eXo">
+							
+						</div>
 					</div>
 				</td>
 			</tr>
-			<tr id="R2">	
-				<td>
-					<div id="B1" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-				<td>
-					<div id="B2" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-				<td>
-					<div id="B3" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-			</tr>	
-			<tr id="R3">	
-				<td>
-					<div id="C1" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-				<td>
-					<div id="C2" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-				<td>
-					<div id="C3" ng-click="changeA1()" ng-class="{true: 'A1', false: 'A1X'}[A1XO]">
-					</div>
-				</td>
-			</tr>
-		</table>       
+		</table>     
 	</div>
+	<div class="result" ng-bind="exCon.result"></div>  
+	<!-- <div id="startPage">
+		<h1>TIC•TAC•TOE</h1>
+		<form>
+			<div><input class="PLAYA1" type="name" placeholder="Player 1"></div>
+			<div><input class="PLAYA2" type="name" placeholder="Player 2"></div>
+		</form>
+		<p id="cross"> ┼ </p>
+	</div> -->
+
+
 </body>
 </html>

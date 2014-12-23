@@ -1,0 +1,18 @@
+body{
+	background-color: black;
+}
+div{
+	border:1px white solid;
+}
+.row{
+}
+.cell{
+	width: 5px;
+	height: 5px;
+	margin: auto;
+	border:1px white solid;
+	float: left;
+
+}
+#gameboard_div{
+}
