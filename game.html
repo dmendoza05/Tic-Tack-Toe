@@ -17,10 +17,10 @@
 	<!-- table will create the gameboard. it will be 3x3 in size and each cell will be clickable  -->
 	<div>
 		<table id="gameboard_Id">
-			<tr data-ng-repeat="row in exCon.gameArray">
+			<tr data-ng-repeat="row in exCon.fireGame.board">
 				<td data-ng-repeat="cell in row" ng-click="exCon.click($parent.$index, $index)">
 					<div>
-						<div class="sym" ng-class="this.cell.eXo">
+						<div class="sym" ng-class="cell.eXo">
 							
 						</div>
 					</div>
