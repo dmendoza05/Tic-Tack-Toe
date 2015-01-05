@@ -1,0 +1,73 @@
+	<!DOCTYPE html>
+<html ng-app="eXoApp">
+<head>
+	<meta charset="utf-8">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link href='https://fonts.googleapis.com/css?family=Cinzel:900' rel='stylesheet' type='text/css'>
+
+	<script src="script/angular.js"></script>
+	<script src="https://cdn.firebase.com/js/client/2.0.6/firebase.js"></script>
+	<script src="https://cdn.firebase.com/libs/angularfire/0.9.0/angularfire.min.js"></script>
+	<script src="script/main.js"></script>
+ 	<script src="script/ExoController.js"></script> 
+
+	<title> Tic Tac Toe </title>
+</head>
+
+<body ng-controller="ExoController as exCon">	
+	<div class="startPage"> <!-- creates a title page with 3 sections-->
+
+<!-- Player 1 -->
+		<div class="playerOne">
+			<div class="playerName" ng-bind="exCon.fireGame.firstName"></div>
+			<h2>PLAYER 1</h2>
+			<div ng-hide="exCon.fireGame.showOne"><button class="enter" ng-click="exCon.enter('1')" ng-disabled="exCon.disableOne"> Enter </button></div>
+
+			<form ng-show="exCon.fireGame.showOne" ng-submit="exCon.submit('1')">
+				<input class="inputName" type="text" placeholder="Name" ng-model="exCon.playerOneName">
+				<br><br>
+				<input class="submit" type="submit">
+			</form>
+			<!-- <div class="sampleSquare"></div> -->
+		</div>
+
+<!-- Player 2 -->
+		<div class="playerTwo">
+			<div class="playerName" ng-bind="exCon.fireGame.secondName"></div>
+			<h2>PLAYER 2</h2>
+			<div ng-hide="exCon.fireGame.showTwo"><button class="enter" ng-click="exCon.enter('2')" ng-disabled="exCon.disableTwo"> Enter </button></div>
+
+			<form ng-show="exCon.fireGame.showTwo" ng-submit="exCon.submit('2')">
+				<input class="inputName" type="text" placeholder="Name" ng-model="exCon.playerTwoName">
+				<br><br>
+				<input class="submit" type="submit">	
+			</form>
+			<!-- <div class="sampleCircle"></div> -->
+		</div>
+
+		<div class="title" ng-hide="gameStart">
+			<h1>TIC TAC TOE</h1>
+			<button class="start" ng-click="[gameStart=true]"> Start Game </button>
+		</div>
+	</div>
+
+	<div id="gameboard_div" ng-show="gameStart">
+		<table id="gameboard_table">
+			<tr data-ng-repeat="row in exCon.fireGame.board">
+				<td data-ng-repeat="cell in row" ng-click="exCon.click($parent.$index, $index)">
+					<div>
+						<div ng-class="cell.eXo">
+						</div>
+					</div>
+				</td>
+			</tr>
+		</table>     
+
+		<!-- where the results show -->
+		<div class="result" ng-bind="exCon.fireGame.result"></div>  
+	</div>
+
+</body>
+</html>

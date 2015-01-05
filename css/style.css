@@ -1,67 +1,135 @@
 body{
 	background-color: black;
+ 	font-family: 'Cinzel', serif;
+ 	color: white;
 
-}
-input{
-	background-color: black;
-	color: white;
-	border-color: black;
-	text-align: center;
-	width: 120px;
-	height: 30px;
-}
-header{
-	text-align: center;
 }
 table{
 	-webkit-transform: rotate(45deg);
-	height: 170px;
-	width: 170px;
+	height: 300px;
+	width: 300px;
 	padding: 0;
 	border-spacing: 0;
 	border-collapse: collapse;
-	margin: 60px auto;
+	/*margin: 100px auto;*/
+	position: absolute;
+	top: 100px;
+	left: 500px;
 	background-color: black;
 }
 td{
 	background-color: black;
 	border: 2px white solid;
-	width: 54px;
-	height: 54px;
+	width: 97px;
+	height: 97px;
 }
-div{
-	width: 100%;
-	height:100%;
-	color: white;
-	font-size: 30px;
-}
+
 /*   o~o~o~OOO~o~o~o
    <(    CLASSES    )>
      o~o~o~OOO~o~o~o
 */	
+.startPage{
+	width: 1280px;
+	height: 500px;
+	background-color: black;
+}
+.enter{
+	border: 0;
+	background-color: black;
+}
+.playerName{
+	position: relative;
+	font-size: 80px;
+	height: 108px;
+}
+.playerOne{
+	/*border: 2px white solid;*/
+	width: 388px; 
+	height: 415px;
+	position: absolute;
+	left: 50px;
+	top: 50px;
+	color:white;
+	text-align: center;
+}
+.title{
+	/*border: 2px white solid;*/
+	width: 396px; 
+	height: 415px;
+	position: absolute;
+	left: 440px;
+	top: 50px;
+	color:white;
+	text-align: center;
+}
+.playerTwo{
+	/*border: 2px white solid;*/
+	width: 388px; 
+	height: 415px;
+	position: absolute;
+	left: 838px;
+	top: 50px;
+	color:white;
+	text-align: center;
+}
+.inputName{
+	background-color: black;
+	color: white;
+	border: 0;
+	outline: none;
+	text-align: center;
+}
+.sampleSquare{
+	width: 50px;
+	height: 50px;
+	outline: none;
+	background-color: white;
+	margin: 120px 0 0 0px;
+	display: inline-block;
+	border: 0;
+}
+.sampleCircle{
+	width: 55px;
+	height: 55px;
+	outline: none;
+	background-color: white;
+	margin: 113px 0 0 0px;
+	display: inline-block;
+	border-radius: 100px;
+	border: 0;
+}
+.start{
+	width: 170px;
+	height: 50px;
+	margin: 70px 0 0 0;
+	display: inline-block;
+	background-color: black;
+	border: 0;
+	outline: none;
+}
+.start:hover{
+	font-size: 20px;
+	cursor: pointer; 
+}
 .X{
-	width: 30px; 
-	height: 30px;
- 	margin: 22px 0 0 10px;
- 	background-color: white;
+	width: 63px; 
+	height: 63px;
+ 	margin: 3px 0 0 18px;
+ 	background-color: white;	
 }
 
 .X:hover{
-	background-color: maroon;
+	cursor: not-allowed;
 }
 .O{
-	margin: 5px auto;
-	width: 36px; 
-	height: 36px;
- 	margin: 18px 0 0 8px;
+	width: 78px; 
+	height: 78px;
+ 	margin: 0px 0 0 10px;
   	background-color: white;
   	border-radius: 100px
 }
 .O:hover{
-	background-color: indigo;
-}
-.PLAYA1{
-	margin-left: 20px;
+	cursor: not-allowed;
 }
 .result{
 	margin: auto;
@@ -70,30 +138,15 @@ div{
 	width: 300px;
 	height: 40px;
 }
+.submit{
+	border: 0;
+	background-color: black;
+}
+.result{
+	font-size: 60px;
+	margin: auto;
+}
 /*     o~o~o~OOO~o~o~o
      <(      #ID      )>
        o~o~o~OOO~o~o~o
 */
-#startPage{
-	width: 500px;
-	height: 300px;
-	border: 1px white solid;
-	position: absolute;
-	left: 15%;
-	top: 10%;
-	background-color: black;
-	color: white;
-	text-align: center;
-}
-#cross{
-	-webkit-transform: rotate(45deg);
-	margin: auto;
-	font-size: 100px;
-}
-/*#triangle{
-	width: 0px; 
-	height: 0;
- 	border: 12px solid transparent;
- 	 border-right-color: white;
- 	border-left-color: white; 
-}*/
