@@ -23,13 +23,15 @@
 		<div class="playerOne">
 			<div class="playerName" ng-bind="exCon.fireGame.firstName"></div>
 			<h2>PLAYER 1</h2>
-			<div ng-hide="exCon.fireGame.showOne"><button class="enter" ng-click="exCon.enter('1')" ng-disabled="exCon.disableOne"> Enter </button></div>
+			<div  ng-hide="exCon.fireGame.hideOne">
+				<div ng-hide="exCon.fireGame.showOne"><button class="enter" ng-click="exCon.enter('1')" ng-disabled="exCon.disableOne"> Enter </button></div>
 
-			<form ng-show="exCon.fireGame.showOne" ng-submit="exCon.submit('1')">
+				<form ng-show="exCon.fireGame.showOne" ng-submit="exCon.submit('1')">
 				<input class="inputName" type="text" placeholder="Name" ng-model="exCon.playerOneName">
 				<br><br>
 				<input class="submit" type="submit">
-			</form>
+				</form>
+			</div>
 			<!-- <div class="sampleSquare"></div> -->
 		</div>
 
@@ -37,26 +39,29 @@
 		<div class="playerTwo">
 			<div class="playerName" ng-bind="exCon.fireGame.secondName"></div>
 			<h2>PLAYER 2</h2>
-			<div ng-hide="exCon.fireGame.showTwo"><button class="enter" ng-click="exCon.enter('2')" ng-disabled="exCon.disableTwo"> Enter </button></div>
-
-			<form ng-show="exCon.fireGame.showTwo" ng-submit="exCon.submit('2')">
-				<input class="inputName" type="text" placeholder="Name" ng-model="exCon.playerTwoName">
-				<br><br>
-				<input class="submit" type="submit">	
-			</form>
+			<div  ng-hide="exCon.fireGame.hideTwo">
+				<div ng-hide="exCon.fireGame.showTwo"><button class="enter" ng-click="	exCon.enter('2')" ng-disabled="exCon.disableTwo"> Enter </button></div>
+	
+				<form ng-show="exCon.fireGame.showTwo" ng-submit="exCon.submit('2')" >
+					<input class="inputName" type="text" placeholder="Name" ng-model="	exCon.playerTwoName">
+					<br><br>
+					<input class="submit" type="submit">	
+				</form>
+			</div>
 			<!-- <div class="sampleCircle"></div> -->
 		</div>
 
-		<div class="title" ng-hide="gameStart">
+		<div class="title" ng-hide="exCon.startGame">
 			<h1>TIC TAC TOE</h1>
-			<button class="start" ng-click="[gameStart=true]"> Start Game </button>
+			<button class="start" ng-click="exCon.gameStart()"> Start Game </button>
+			<div class="status" ng-bind="exCon.fireGame.playerStatus"></div>
 		</div>
 	</div>
 
-	<div id="gameboard_div" ng-show="gameStart">
+	<div ng-show="exCon.startGame" >
 		<table id="gameboard_table">
 			<tr data-ng-repeat="row in exCon.fireGame.board">
-				<td data-ng-repeat="cell in row" ng-click="exCon.click($parent.$index, $index)">
+				<td data-ng-repeat="cell in row" ng-disabled="exCon.fireGame.disableTable" ng-click="exCon.click($parent.$index, $index)">
 					<div>
 						<div ng-class="cell.eXo">
 						</div>
